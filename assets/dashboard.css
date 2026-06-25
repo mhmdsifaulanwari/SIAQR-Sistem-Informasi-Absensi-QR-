@@ -1,0 +1,779 @@
+/* IMPORT FONT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+body {
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  background: #f4f6f9;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+}
+
+/* SIDEBAR */
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+
+  padding: 25px 18px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(64, 25, 68, 0.95),
+    rgba(32, 16, 52, 0.95)
+  );
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.25);
+
+  color: white;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* SUBMENU */
+.submenu {
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.submenu li {
+  font-size: 14px;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 25px;
+  background: #f4f6f9;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  text-align: left; /* FIX */
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+/* SHORTCUT */
+.shortcut {
+  margin-top: 20px;
+}
+
+.shortcut a {
+  margin-right: 10px;
+  padding: 10px 15px;
+  background: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* CHART */
+.chart-box {
+  background: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.chart-box canvas {
+  height: 300px !important;
+}
+
+/* ================= MAHASISWA ================= */
+
+/* FILTER */
+.form-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-filter input,
+.form-filter select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* BUTTON */
+.btn-cari {
+  background: #bdc3c7;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-tambah {
+  background: rgba(64, 25, 68, 0.95);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: rgba(64, 25, 68, 0.95);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background: #e74c3c;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+table th {
+  background: rgba(64, 25, 68, 0.95);
+  color: white;
+  padding: 12px;
+}
+
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* HOVER */
+table tr:hover {
+  background: #f9f9f9;
+}
+
+/* AKSI */
+.edit {
+  color: orange;
+}
+
+.hapus {
+  color: red;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: white;
+  padding: 25px;
+  width: 400px;
+  border-radius: 12px;
+}
+
+.modal-box input,
+.modal-box textarea,
+.modal-box select {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* FILTER */
+.form-filter {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* SCROLL TABLE */
+.table-scroll {
+  overflow-y: auto;
+}
+
+/* TEXT TURUN KE BAWAH */
+table th,
+table td {
+  max-width: 150px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+/* KHUSUS ALAMAT */
+.alamat {
+  max-width: 220px;
+}
+
+/* SPACE BAWAH */
+.main {
+  padding-bottom: 60px;
+}
+
+/* SCROLL TABLE */
+
+.table-scroll {
+  height: calc(100vh - 260px); /* kunci utama */
+  overflow-y: auto;
+}
+
+.card.table-card {
+  min-height: 550px;
+}
+
+/* ================= FIX GENERATE QR ================= */
+
+/* FILTER BIAR SAMA SEMUA */
+.form-filter select {
+  min-width: 180px;
+}
+
+/* LABEL */
+.label-jadwal {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* FORM JADWAL (KIRI & RAPI) */
+.form-jadwal {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+/* DROPDOWN BESAR & KONSISTEN */
+.select-jadwal {
+  width: 400px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* BUTTON SEJAJAR */
+.form-jadwal button {
+  height: 40px;
+}
+
+/* CARD BIAR GA KECIL */
+.card {
+  width: 100%;
+}
+
+/* dashboard ------------------------------------------------------- */
+.table-profile {
+  margin-top: 15px;
+  border-collapse: collapse;
+}
+
+.table-profile td {
+  padding: 8px 15px 8px 0;
+  font-size: 18px;
+}
+
+/* ================= PROFILE DASHBOARD ================= */
+
+.navbar {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px 35px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: calc(100vh - 90px);
+  overflow-y: auto;
+}
+
+/* JUDUL */
+.navbar h1 {
+  margin: 0 0 15px 0;
+  font-size: 26px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+/* FOTO */
+.profile-box {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.profile-box img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #2c3e50;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* INPUT FILE */
+.profile-box input[type="file"] {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-size: 13px;
+}
+
+/* TOMBOL */
+.profile-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.profile-buttons button {
+  min-width: 120px;
+  font-size: 13px;
+  padding: 8px 12px;
+}
+
+/* TABLE */
+.table-profile {
+  width: 100%;
+  max-width: 750px;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.table-profile tr {
+  border-bottom: 1px solid #eee;
+}
+
+.table-profile td {
+  padding: 10px 8px;
+  font-size: 15px;
+}
+
+.table-profile td:first-child {
+  width: 160px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    min-height: auto;
+  }
+
+  .navbar h1 {
+    font-size: 20px;
+  }
+
+  .profile-box img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .table-profile td {
+    font-size: 13px;
+  }
+}
+/* file */
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+
+  background: #34495e;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.custom-file-upload:hover {
+  background: #2c3e50;
+}
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+
+/* dropdown sub menu========================================================================= */
+/* ================= MENU ================= */
+
+/* MENU */
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+/* MENU UTAMA */
+
+.menu-link,
+.menu-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  padding: 14px 18px;
+
+  margin-bottom: 10px;
+
+  border-radius: 14px;
+
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  position: relative;
+}
+
+/* HOVER */
+
+.menu-link:hover,
+.menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ACTIVE */
+
+/* SUBMENU */
+
+.submenu {
+  display: none;
+
+  list-style: none;
+
+  margin-left: 14px;
+  margin-top: 6px;
+}
+
+/* SHOW */
+
+.submenu.show {
+  display: block;
+}
+
+/* SUBMENU ITEM */
+
+.submenu li a {
+  display: block;
+
+  padding: 10px 14px;
+
+  margin: 4px 0;
+
+  border-radius: 10px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+/* HOVER */
+
+/* ACTIVE SUBMENU */
+
+/* ARROW */
+
+.arrow {
+  font-size: 12px;
+
+  transition: 0.2s;
+}
+
+/* MENU UTAMA */
+
+.menu-link,
+.menu-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  padding: 13px 16px;
+  margin-bottom: 8px;
+
+  border-radius: 14px;
+
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.2s ease;
+}
+/* ================= RESPONSIVE SIDEBAR ================= */
+
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+  }
+
+  /* SIDEBAR */
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+
+    padding: 15px;
+
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  /* MENU */
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+  }
+
+  .menu > li {
+    width: 100%;
+  }
+
+  /* MENU UTAMA */
+  .menu-link,
+  .menu-toggle {
+    padding: 12px 14px;
+
+    font-size: 14px;
+  }
+
+  /* SUBMENU */
+  .submenu {
+    margin-left: 8px;
+  }
+
+  .submenu li a {
+    font-size: 13px;
+
+    padding: 9px 12px;
+  }
+
+  /* MAIN */
+  .main {
+    width: 100%;
+
+    padding: 15px;
+  }
+
+  /* CARD */
+  .card {
+    overflow-x: auto;
+  }
+
+  /* TABLE */
+  table {
+    min-width: 700px;
+  }
+
+  /* PROFILE */
+  .navbar {
+    padding: 20px;
+  }
+
+  .table-profile td {
+    font-size: 13px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 576px) {
+  .sidebar h2 {
+    font-size: 18px;
+
+    margin-bottom: 18px;
+  }
+
+  .menu-link,
+  .menu-toggle {
+    font-size: 13px;
+
+    padding: 11px 12px;
+  }
+
+  .submenu li a {
+    font-size: 12px;
+  }
+
+  .main {
+    padding: 10px;
+  }
+
+  .navbar {
+    border-radius: 12px;
+  }
+
+  .table-profile td {
+    display: block;
+
+    width: 100%;
+
+    padding: 6px 0;
+  }
+
+  .profile-buttons {
+    flex-direction: column;
+  }
+
+  .profile-buttons button {
+    width: 100%;
+  }
+}
+
+/* FIX MENU CLICK */
+
+.menu-toggle {
+  user-select: none;
+}
+
+/* FIX ABSENSI KHUSUS */
+
+.submenu {
+  padding-left: 6px;
+}
+
+/* HOVER MENU */
+
+.menu-link:hover,
+.menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+}
+
+/* HOVER SUBMENU */
+
+.submenu li a:hover {
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+}
+/* PROFILE MENU */
+
+.profile-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+/* FOTO PROFILE */
+
+.profile-img {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 3px solid rgba(255, 255, 255, 0.2);
+
+  transition: 0.3s;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.material-symbols-outlined {
+  font-size: 20px;
+  vertical-align: middle;
+}
+.material-symbols-outlined {
+  font-size: 20px;
+  vertical-align: middle;
+}
